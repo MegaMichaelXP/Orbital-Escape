@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour
     Camera PlayerCamera;
     Light Flashlight;
 
+    GameObject PauseMenu;
+    GameObject Pointer;
+
     float MouseX;
     float MouseY;
     float Multiplier = 0.1f;
@@ -23,6 +26,10 @@ public class CameraController : MonoBehaviour
         PlayerCamera = GetComponentInChildren<Camera>();
         Flashlight = GetComponentInChildren<Light>();
         Cursor.lockState = CursorLockMode.Locked;
+        PauseMenu = GameObject.Find("PauseMenu");
+        Pointer = GameObject.Find("Pointer");
+        PauseMenu.SetActive(false);
+        Pointer.SetActive(true);
     }
 
     // Update is called once per frame
@@ -40,13 +47,11 @@ public class CameraController : MonoBehaviour
         {
             if (!Menu)
             {
-                Cursor.lockState = CursorLockMode.None;
-                Menu = true;
+                PauseGame();
             }
             else
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Menu = false;
+                UnpauseGame();
             }
         }
         if (!Menu)
@@ -70,5 +75,23 @@ public class CameraController : MonoBehaviour
             XRot -= MouseY * YSensitivity * Multiplier;
             XRot = Mathf.Clamp(XRot, -90f, 90f);
         }
+    }
+
+    public void PauseGame()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
+        Pointer.SetActive(false);
+        PauseMenu.SetActive(true);
+        Menu = true;
+    }
+
+    public void UnpauseGame()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
+        Pointer.SetActive(true);
+        PauseMenu.SetActive(false);
+        Menu = false;
     }
 }
