@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] float YSensitivity;
 
     Camera PlayerCamera;
+    Light Flashlight;
 
     float MouseX;
     float MouseY;
@@ -15,10 +16,12 @@ public class CameraController : MonoBehaviour
     float XRot;
     float YRot;
     bool Menu = false;
+    bool UsingFlashlight = true;
     // Start is called before the first frame update
     void Start()
     {
         PlayerCamera = GetComponentInChildren<Camera>();
+        Flashlight = GetComponentInChildren<Light>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -27,6 +30,7 @@ public class CameraController : MonoBehaviour
     {
         GetPlayerInput();
         PlayerCamera.transform.localRotation = Quaternion.Euler(XRot, 0, 0);
+        Flashlight.transform.localRotation = Quaternion.Euler(XRot, 0, 0);
         transform.rotation = Quaternion.Euler(0, YRot, 0);
     }
 
@@ -45,10 +49,26 @@ public class CameraController : MonoBehaviour
                 Menu = false;
             }
         }
-        MouseX = Input.GetAxisRaw("Mouse X");
-        MouseY = Input.GetAxisRaw("Mouse Y");
-        YRot += MouseX * XSensitivity * Multiplier;
-        XRot -= MouseY * YSensitivity * Multiplier;
-        XRot = Mathf.Clamp(XRot, -90f, 90f);
+        if (!Menu)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (!UsingFlashlight)
+                {
+                    Flashlight.intensity = 0.8f;
+                    UsingFlashlight = true;
+                }
+                else
+                {
+                    Flashlight.intensity = 0f;
+                    UsingFlashlight = false;
+                }
+            }
+            MouseX = Input.GetAxisRaw("Mouse X");
+            MouseY = Input.GetAxisRaw("Mouse Y");
+            YRot += MouseX * XSensitivity * Multiplier;
+            XRot -= MouseY * YSensitivity * Multiplier;
+            XRot = Mathf.Clamp(XRot, -90f, 90f);
+        }
     }
 }
