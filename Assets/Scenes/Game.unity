@@ -1227,7 +1227,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145972176}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f99c629119786a54d92fa2215f20e3b2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1318,8 +1318,9 @@ GameObject:
   - component: {fileID: 1249692597}
   - component: {fileID: 1249692596}
   - component: {fileID: 1249692595}
+  - component: {fileID: 1249692598}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,6 +1428,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249692593}
   m_CullTransparentMesh: 1
+--- !u!114 &1249692598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249692593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71232da4302de464b9791c898dd09207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269225911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1452,7 @@ GameObject:
   - component: {fileID: 1269225915}
   - component: {fileID: 1269225914}
   - component: {fileID: 1269225913}
+  - component: {fileID: 1269225916}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -1548,6 +1562,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269225911}
   m_CullTransparentMesh: 1
+--- !u!114 &1269225916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269225911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af646c694b6790449c538c57c8c522c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1518108469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +1816,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707305496}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f99c629119786a54d92fa2215f20e3b2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

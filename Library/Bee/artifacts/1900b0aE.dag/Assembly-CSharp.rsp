@@ -375,6 +375,10 @@
 "Assets/ControlScripts/MovementController.cs"
 "Assets/IntroScripts/Introduction.cs"
 "Assets/IntroScripts/TextFade.cs"
+"Assets/UIScripts/MainMenuButton.cs"
+"Assets/UIScripts/PlayButton.cs"
+"Assets/UIScripts/QuitButton.cs"
+"Assets/UIScripts/ResumeButton.cs"
 -langversion:9.0
 
 /deterministic

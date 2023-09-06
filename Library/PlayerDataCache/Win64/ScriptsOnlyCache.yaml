@@ -3,7 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraController
     - Introduction
+    - MainMenuButton
     - MovementController
+    - PlayButton
+    - QuitButton
+    - ResumeButton
     - TextFade
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -208,19 +212,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 2826}
+      Script: {instanceID: 2170}
     - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 5814}
+      Script: {instanceID: 5116}
     - Class: 114
-      Script: {instanceID: 8694}
+      Script: {instanceID: 5818}
     - Class: 114
-      Script: {instanceID: 8876}
+      Script: {instanceID: 8700}
     - Class: 114
-      Script: {instanceID: 11000}
+      Script: {instanceID: 8882}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 9126}
+    - Class: 114
+      Script: {instanceID: 11008}
+    - Class: 114
+      Script: {instanceID: 11948}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,19 +273,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1830}
     - Class: 114
-      Script: {instanceID: 5814}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 8694}
+      Script: {instanceID: 5818}
     - Class: 114
-      Script: {instanceID: 8876}
+      Script: {instanceID: 8506}
     - Class: 114
-      Script: {instanceID: 11000}
+      Script: {instanceID: 8700}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 8882}
     - Class: 114
-      Script: {instanceID: 31750}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 31756}
+      Script: {instanceID: 11948}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -332,95 +340,99 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1988}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2360}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2948}
+      Script: {instanceID: 2952}
     - Class: 114
-      Script: {instanceID: 3428}
+      Script: {instanceID: 3432}
     - Class: 114
-      Script: {instanceID: 3498}
+      Script: {instanceID: 3502}
     - Class: 114
-      Script: {instanceID: 3638}
+      Script: {instanceID: 3642}
     - Class: 114
-      Script: {instanceID: 4230}
+      Script: {instanceID: 4234}
     - Class: 114
-      Script: {instanceID: 4994}
+      Script: {instanceID: 4998}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 5040}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 5092}
     - Class: 114
-      Script: {instanceID: 5150}
+      Script: {instanceID: 5154}
     - Class: 114
-      Script: {instanceID: 5334}
+      Script: {instanceID: 5338}
     - Class: 114
-      Script: {instanceID: 5352}
+      Script: {instanceID: 5356}
     - Class: 114
-      Script: {instanceID: 5806}
+      Script: {instanceID: 5810}
     - Class: 114
-      Script: {instanceID: 5814}
+      Script: {instanceID: 5818}
     - Class: 114
-      Script: {instanceID: 5890}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 6008}
+      Script: {instanceID: 6012}
     - Class: 114
-      Script: {instanceID: 6088}
+      Script: {instanceID: 6092}
     - Class: 114
-      Script: {instanceID: 6476}
+      Script: {instanceID: 6480}
     - Class: 114
-      Script: {instanceID: 6528}
+      Script: {instanceID: 6532}
     - Class: 114
-      Script: {instanceID: 7366}
+      Script: {instanceID: 7370}
     - Class: 114
-      Script: {instanceID: 8316}
+      Script: {instanceID: 8320}
     - Class: 114
-      Script: {instanceID: 8376}
+      Script: {instanceID: 8380}
     - Class: 114
-      Script: {instanceID: 8524}
+      Script: {instanceID: 8530}
     - Class: 114
-      Script: {instanceID: 8694}
+      Script: {instanceID: 8700}
     - Class: 114
-      Script: {instanceID: 8876}
+      Script: {instanceID: 8882}
     - Class: 114
-      Script: {instanceID: 9554}
+      Script: {instanceID: 9562}
     - Class: 114
-      Script: {instanceID: 9618}
+      Script: {instanceID: 9626}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9888}
     - Class: 114
-      Script: {instanceID: 9986}
+      Script: {instanceID: 9994}
     - Class: 114
-      Script: {instanceID: 10254}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 10336}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 10944}
     - Class: 114
-      Script: {instanceID: 11000}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11864}
     - Class: 114
-      Script: {instanceID: 11950}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 12040}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 12164}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 12520}
+    - Class: 114
+      Script: {instanceID: 12596}
+    - Class: 114
+      Script: {instanceID: 13416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -518,6 +530,12 @@ ScriptsOnlyBuild:
     className: LocalVolumetricFog
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenuButton
+  - hash:
+      serializedVersion: 2
       Hash: 7e46fc62b3b8af1ed721e5524175e0ec
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
@@ -558,6 +576,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TextFade
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1472,6 +1496,12 @@ ScriptsOnlyBuild:
     className: HDProjectSettingsReadOnlyBase
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Introduction
+  - hash:
+      serializedVersion: 2
       Hash: 3d85e86e2facb191fcf4991352e47977
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1578,6 +1608,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ResumeButton
   - hash:
       serializedVersion: 2
       Hash: fb9c4d2e3dc6697a415ee9f071d991f7
@@ -1904,6 +1940,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: QuitButton
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
@@ -2078,6 +2120,12 @@ ScriptsOnlyBuild:
     className: LightCluster
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayButton
+  - hash:
+      serializedVersion: 2
       Hash: bbd18fc68ceeefb10270c51811911485
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -2208,18 +2256,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX.Utility
     className: VFXInputAxisBinder
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Introduction
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TextFade
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
