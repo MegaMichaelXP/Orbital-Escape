@@ -16,6 +16,7 @@ public class PlayButton : MonoBehaviour
 
     void PlayGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("Intro");
     }
 }

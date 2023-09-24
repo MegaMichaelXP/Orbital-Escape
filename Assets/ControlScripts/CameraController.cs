@@ -9,25 +9,34 @@ public class CameraController : MonoBehaviour
 
     Camera PlayerCamera;
     Light Flashlight;
+    DataKeeper DataStore;
 
     GameObject PauseMenu;
+    GameObject SettingsMenu;
     GameObject Pointer;
 
     float MouseX;
     float MouseY;
+    float SensitivityFactor;
     float Multiplier = 0.1f;
     float XRot;
     float YRot;
     bool Menu = false;
     bool UsingFlashlight = true;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PlayerCamera = GetComponentInChildren<Camera>();
         Flashlight = GetComponentInChildren<Light>();
-        Cursor.lockState = CursorLockMode.Locked;
         PauseMenu = GameObject.Find("PauseMenu");
+        SettingsMenu = GameObject.Find("SettingsMenu");
         Pointer = GameObject.Find("Pointer");
+        DataStore = GameObject.Find("DataKeeper").GetComponent<DataKeeper>();
+        SensitivityFactor = DataStore.GetSensitivityFactor();
+    }
+
+    void Start()
+    {
         PauseMenu.SetActive(false);
         Pointer.SetActive(true);
     }
@@ -71,8 +80,8 @@ public class CameraController : MonoBehaviour
             }
             MouseX = Input.GetAxisRaw("Mouse X");
             MouseY = Input.GetAxisRaw("Mouse Y");
-            YRot += MouseX * XSensitivity * Multiplier;
-            XRot -= MouseY * YSensitivity * Multiplier;
+            YRot += MouseX * XSensitivity * Multiplier * SensitivityFactor;
+            XRot -= MouseY * YSensitivity * Multiplier * SensitivityFactor;
             XRot = Mathf.Clamp(XRot, -90f, 90f);
         }
     }
@@ -89,9 +98,11 @@ public class CameraController : MonoBehaviour
     public void UnpauseGame()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        SensitivityFactor = DataStore.GetSensitivityFactor();
         Time.timeScale = 1;
         Pointer.SetActive(true);
         PauseMenu.SetActive(false);
+        SettingsMenu.SetActive(false);
         Menu = false;
     }
 }
